@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+    
+    body {
+      background: linear-gradient(120deg, #ffcccc, #ffffcc);
+    }
+    
+    .container {
+      margin-top: 100px;
+    }
+    
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .card-header {
+      background-color: #fff;
+      border-bottom: none;
+      text-align: center;
+      padding: 20px 15px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    
+    .card-body {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    
+    .form-control {
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgb(31, 237, 244);
+    }
+    
+    .btn-primary {
+      background-color: #ff6b6b;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 30px;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .btn-primary:hover {
+      background-color: #ff4d4d;
+    }
+    
+    .animated-heart {
+      display: inline-block;
+      animation: heartbeat 0.4s infinite;
+    }
+    
+    .custom-label {
+      font-size: 2rem;
+      font-family: 'Dancing Script', cursive;
+      color: #67e2f4;
+    }
+    
+    .custom-label:hover {
+      color: #a5a8ab;
+    }
+    
+    .login-links {
+      margin-top: 10px;
+      text-align: center;
+    }
+    
+    .login-links a {
+      color:#6c757d;
+      text-decoration: underline;
+    }
+    
+    .login-links a:hover {
+      color:#6c757d;
+      text-decoration: underline;
+    }
+    
+    .login-links a:not(:last-child)::after {
+      content: "|";
+      margin: 0 5px;
+      color: #6c757d;
+    }
+    
+    .privacy-policy {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+    
+    .privacy-policy a {
+      color: #6c757d;
+      text-decoration: none;
+    }
+    
+    .privacy-policy a:hover {
+      text-decoration: underline;
+    }
+    
+    .pwd-strength {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+    
+    .pwd-strength span {
+      display: block;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    
+    .pwd-strength .weak {
+      color: red;
+    }
+    
+    .pwd-strength .strong {
+      color: green;
+    }
+    
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.3);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    .mixed-font {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      animation: 0.4s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="mb-0 mixed-font">About Us</h3>
+            <div class="language-select">
+              <select id="language-select">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <!-- Add more language options as needed -->
+              </select>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>Welcome to ChateWoW, the ultimate chat experience! Our platform provides a seamless and interactive environment for users to connect, chat, and make new friends from around the world. With our user-friendly interface and advanced features, we aim to revolutionize the way people communicate online.</p>
+            
+            <p>Key Features:</p>
+            <ul>
+              <li>Real-time chat with individuals or groups</li>
+              <li>Instant messaging for quick and efficient communication</li>
+              <li>Secure and private conversations</li>
+              <li>Support for multiple languages</li>
+              <li>Easy-to-use interface for a smooth user experience</li>
+              <li>Customizable profile settings</li>
+              <li>Fun emojis and stickers to express yourself</li>
+            </ul>
+            
+            <p>At ChateWoW, we value your privacy and ensure the confidentiality of your data. We adhere to strict security measures to protect your personal information and provide a safe online environment.</p>
+            
+            <p>Join ChateWoW today and experience a whole new level of social interaction!</p>
+          </div>
+          <div class="login-links">
+            <a href="logg.htm">Back to Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
