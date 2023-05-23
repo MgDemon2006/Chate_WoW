@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Login Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+    
+    body {
+      background: linear-gradient(120deg, #ffcccc, #ffffcc);
+    }
+    
+    .container {
+      margin-top: 100px;
+    }
+    
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .card-header {
+      background-color: #fff;
+      border-bottom: none;
+      text-align: center;
+      padding: 20px 15px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    
+    .card-body {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    
+    .form-control {
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgb(31, 237, 244);
+    }
+    
+    .btn-primary {
+      background-color: #ff6b6b;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 30px;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .btn-primary:hover {
+      background-color: #ff4d4d;
+    }
+    
+    .animated-heart {
+      display: inline-block;
+      animation: heartbeat 0.4s infinite;
+    }
+    
+    .custom-label {
+      font-size: 2rem;
+      font-family: 'Dancing Script', cursive;
+      color: #67e2f4;
+    }
+    
+    .custom-label:hover {
+      color: #a5a8ab;
+    }
+    
+    .login-links {
+      margin-top: 10px;
+      text-align: center;
+    }
+    
+    .login-links a {
+      color:#6c757d;
+      text-decoration: underline;
+    }
+    
+    .login-links a:hover {
+      color:#6c757d;
+      text-decoration: underline;
+    }
+    
+    .login-links a:not(:last-child)::after {
+      content: "|";
+      margin: 0 5px;
+      color: #6c757d;
+    }
+    
+    .privacy-policy {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: #6c757d;
+    }
+    
+    .privacy-policy a {
+      color: #6c757d;
+      text-decoration: none;
+    }
+    
+    .privacy-policy a:hover {
+      text-decoration: underline;
+    }
+    
+    .pwd-strength {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+    
+    .pwd-strength span {
+      display: block;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    
+    .pwd-strength .weak {
+      color: red;
+    }
+    
+    .pwd-strength .strong {
+      color: green;
+    }
+    
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.3);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    .mixed-font {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      animation: 0.4s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="mb-0 mixed-font">ChateWoW</h3>
+            <div class="language-select">
+              <select id="language-select">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <!-- Add more language options as needed -->
+              </select>
+            </div>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label class="custom-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label class="custom-label">Password</label>
+                <input type="password" class="form-control" placeholder="Enter your password" required>
+              </div>
+              <div class="pwd-strength">
+                <span id="pwd-strength-text"></span>
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="not-robot-checkbox" required>
+                  <label class="form-check-label" for="not-robot-checkbox">
+                    <span id="not-robot-label"></span>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Login <span class="animated-heart">&hearts;</span></button>
+            </form>
+            <div class="login-links">
+              <a href="#" id="forgot-password-link"></a>
+              <a href="#" id="create-account-link"></a>
+             <a href="tos.htm">Terms Of Service</a>
+            <a href="policy.htm">Policy </a>
+             <a href="about.htm">About Us</a>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const languageSelect = document.getElementById('language-select');
+  const passwordInput = document.querySelector('input[type="password"]');
+  const pwdStrengthText = document.getElementById('pwd-strength-text');
+  const notRobotLabel = document.getElementById('not-robot-label');
+  const forgotPasswordLink = document.getElementById('forgot-password-link');
+  const createAccountLink = document.getElementById('create-account-link');
+  const termsOfServiceLink = document.getElementById('terms-of-service-link');
+  const privacyPolicyLink = document.getElementById('privacy-policy-link');
+  
+  const translations = {
+    en: {
+      passwordEasyToHack: 'Your password is easy to hack',
+      goodPassword: 'Good password',
+      notARobot: 'I\'m not a robot',
+      forgotPassword: 'Forgot password?',
+      createAccount: 'Create account',
+      termsOfService: 'Terms of Service',
+      privacyPolicy: 'Privacy Policy',
+    },
+    fr: {
+      passwordEasyToHack: 'Votre mot de passe est facile à pirater',
+      goodPassword: 'Bon mot de passe',
+      notARobot: 'Je ne suis pas un robot',
+      forgotPassword: 'Mot de passe oublié ?',
+      createAccount: 'Créer un compte',
+      termsOfService: 'Conditions d\'utilisation',
+      privacyPolicy: 'Politique de confidentialité',
+    },
+    es: {
+      passwordEasyToHack: 'Tu contraseña es fácil de hackear',
+      goodPassword: 'Buena contraseña',
+      notARobot: 'No soy un robot',
+      forgotPassword: '¿Olvidaste tu contraseña?',
+      createAccount: 'Crear cuenta',
+      termsOfService: 'Términos de servicio',
+      privacyPolicy: 'Política de privacidad',
+    },
+    // Add more language translations as needed
+  };
+
+  languageSelect.addEventListener('change', function() {
+    const selectedLanguage = this.value;
+    updateTranslations(selectedLanguage);
+  });
+
+  function updateTranslations(language) {
+    const translation = translations[language];
+    
+    if (translation) {
+      notRobotLabel.textContent = translation.notARobot;
+      forgotPasswordLink.textContent = translation.forgotPassword;
+      createAccountLink.textContent = translation.createAccount;
+      termsOfServiceLink.textContent = translation.termsOfService;
+      privacyPolicyLink.textContent = translation.privacyPolicy;
+    }
+  }
+  
+  passwordInput.addEventListener('input', function() {
+    const password = this.value;
+    const passwordLength = password.length;
+    let strength = '';
+    const selectedLanguage = languageSelect.value;
+    const translation = translations[selectedLanguage];
+    
+    if (passwordLength === 0) {
+      strength = '';
+      pwdStrengthText.style.color = '';
+    } else if (passwordLength < 8) {
+      strength = translation ? translation.passwordEasyToHack : 'Your password is easy to hack';
+      pwdStrengthText.style.color = 'red';
+    } else {
+      strength = translation ? translation.goodPassword : 'Good password';
+      pwdStrengthText.style.color = 'green';
+    }
+    
+    pwdStrengthText.textContent = strength;
+  });
+
+  // Initialize translations based on the selected language
+  const selectedLanguage = languageSelect.value;
+  updateTranslations(selectedLanguage);
+</script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
